@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import math
+import os
 from pathlib import Path
 
 # Set the title and favicon that appear in the Browser's tab bar.
@@ -22,8 +23,9 @@ def get_gdp_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME = Path(__file__).parent/'C:\Users\simeq\Documents\Unicorn Python\FD de nuevo\datosfdpython.csv'
-    raw_gdp_df = pd.read_csv(DATA_FILENAME)
+    # DATA_FILENAME = Path(__file__).parent/'C:\Users\simeq\Documents\Unicorn Python\FD de nuevo\datosfdpython.csv'
+    os.chdir('C:\Users\simeq\Documents\Unicorn Python\FD de nuevo')
+    raw_gdp_df = pd.read_csv('datosfdpython.csv')
 
     MIN_MUNDIAL = 1
     MAX_MUNDIAL = 7
