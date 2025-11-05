@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='GDP dashboard',
+    page_title='FD dashboard',
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
 
@@ -79,7 +79,7 @@ min_value = gdp_df['Year'].min()
 max_value = gdp_df['Year'].max()
 
 from_year, to_year = st.slider(
-    'Which years are you interested in?',
+    'Qué mundial quieres ver?',
     min_value=min_value,
     max_value=max_value,
     value=[min_value, max_value])
